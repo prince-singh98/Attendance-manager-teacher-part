@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CheckAttendanceActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/check_attendance_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:layout_marginBottom="16dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/classNameTvVA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="class name"
+        android:textStyle="italic"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@id/check_attendance_toolbar"
+        android:gravity="center"
+        android:layout_marginBottom="8dp"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:id="@+id/selectedDateTvCA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="selected date"
+        android:textStyle="bold"
+        android:textColor="@color/design_default_color_secondary"
+        android:layout_below="@id/classNameTvVA"
+        android:gravity="center"
+        android:layout_marginBottom="8dp"
+        android:textSize="22sp"/>
+
+
+    <ListView
+        android:id="@+id/listViewVA"
+        android:layout_below="@id/selectedDateTvCA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/doneBtnCA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Done"
+        android:layout_margin="16dp"
+        android:background="@drawable/login_button_bk"/>
+</RelativeLayout>
